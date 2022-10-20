@@ -1,0 +1,57 @@
+.btn
+{
+    &,
+    &:link,
+    &:visited
+    {
+        text-decoration: none;
+        border-radius: 100px;
+        text-transform: uppercase;
+        padding: 1rem 5rem;
+        display:inline-block;
+        //padding: 15px 40px;
+        transition: all .2s;
+        position: relative;
+    }
+    &:hover
+    {
+        transform:translateY(-.3rem);
+        box-shadow: 0 10px 20px rgba($color-black, .2);
+        &::after
+        {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0; //neat trick to get fading button
+        }
+    }
+
+    &:active
+    {
+        outline: none;
+        transform:translateY(-.1rem);
+        box-shadow: 0 5px 10px rgba($color-black, .2);
+    }
+
+    &--white
+    {
+        color: $color-gray-1;
+        background-color: $color-white;
+        &::after
+        {
+            background-color:$color-white;
+        }
+    } 
+
+    &::after
+    {
+        content:"";
+        display:inline-block;
+        height:100%;
+        width:100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+}
