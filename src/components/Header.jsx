@@ -1,11 +1,13 @@
-import group from './group-photo.png';
-import './Header.scss';
 
 function Header()
 {
     return(
-        <div>
-            <img src={group} alt="harem" class= "headerImage"></img>
+        <div class="headerImage">
+            <div class="center-box">
+                <span class="headertext headertext__primary">Nathaniel</span>
+                <span class="headertext headertext__secondary">something something</span>
+            </div>
+            
         </div>
     );
 }
