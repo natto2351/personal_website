@@ -2,26 +2,18 @@ import Header from './components/Header'
 import Modal from './components/Modal'
 import Footer from './components/Footer'
 
-import React, {useState} from 'react';
+import React from 'react';
 
 
 const App = () => {
-const [bIsModalActive, setIsModalActive] = useState(false);
 
-const modalTurnOff = () =>
-{
-  setIsModalActive(false);
-};
-const modalTurnOn = () =>
-{
-  setIsModalActive(true);
-};
 
 return (
     <div>
-      {bIsModalActive && <Modal onConfirm = {modalTurnOff}></Modal>}
-      <Header onConfirm = {modalTurnOn}>Testing text</Header>
+      
+      <Header>Testing text</Header>
       <Footer></Footer>
+      <Modal title={'Testing Modal'}></Modal>
     </div>
   );
 }

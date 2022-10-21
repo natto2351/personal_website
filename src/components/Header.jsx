@@ -3,11 +3,11 @@ import Button from './Button';
 const Header = (props) =>
 {
     return(
-        <div class="headerImage">
+        <div class="headerImage" id="#home">
             <div class="center-box">
-                <span class="headertext headertext__primary">Nathaniel</span>
-                <span class="headertext headertext__secondary margin-bottom-small">something something</span>
-                <Button class="btn btn--white" onClick={props.onConfirm}>Click</Button>
+                <span class="headertext headertext__primary">Nathaniel Pereira</span>
+                <span class="headertext headertext_secondary margin-bottom-small">Budding IT Generalist // Dad joke repository</span>
+                <Button class="btn btn--white" anchor= {'#modal'}>Click</Button>
             </div>
             
         </div>

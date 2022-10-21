@@ -21,13 +21,15 @@
 
     &__primary
     {
+        font-family:'Fasthand',sans-serif;
         display: block;
         font-size: 3rem;
         text-align: center;
+        text-transform: uppercase;
     }
-    &__secondary
+
+    &_secondary
     {
-        font-family: 'Fasthand',sans-serif;
         display: block;
         font-size: 2rem;
     }
