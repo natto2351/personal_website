@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fasthand:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 .margin-bottom-small {
   margin-bottom: 2rem;
 }
@@ -7,15 +7,16 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lora", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -27,7 +28,7 @@ body {
   height: 95vh;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url("./images/pcb-1.jpg");
+  background-image: linear-gradient(to right, rgba(72, 106, 248, 0.8), rgba(63, 133, 217, 0.8)), url("./images/pcb-1.jpg");
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   position: relative;
 }
@@ -42,27 +43,29 @@ body {
 
 .headertext {
   color: #fff;
+  justify-content: center;
 }
 .headertext__primary {
-  font-family: "Fasthand", sans-serif;
-  display: block;
-  font-size: 3rem;
+  font-family: "Lora", sans-serif;
+  font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 .headertext_secondary {
+  font-family: "Raleway", sans-serif;
   display: block;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
-  padding: 1rem 5rem;
-  display: inline-block;
+  padding: 1rem 7rem;
   transition: all 0.2s;
   position: relative;
+  text-align: center;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -112,36 +115,17 @@ body {
   visibility: visible;
 }
 
-.modalImage {
-  height: 75vh;
-  width: 55vw;
-  transform: translate(-50%, -50%);
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url("./images/pcb-1.jpg");
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  z-index: 200;
-}
-
-.center-box {
+.modal-center-box {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 3rem;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.headertext {
-  color: #fff;
-}
-.headertext__primary {
-  display: block;
-  font-size: 3rem;
-  text-align: center;
-}
-.headertext__secondary {
-  display: block;
-  font-size: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  z-index: 100;
+  background-color: #486AF8;
 }
 
 .backdrop {
@@ -155,10 +139,54 @@ body {
   background: rgba(0, 0, 0, 0.75);
 }
 
+.modal-header {
+  color: #fff;
+  font-size: 4rem;
+  text-align: left;
+  grid-row: 1/2;
+}
+.modal-content {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: left;
+  grid-row: 2/3;
+}
+.modal-footer {
+  justify-self: left;
+  grid-row: 3/4;
+}
+
 .footer {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(20vw, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.copyright {
+  padding: 2rem;
+  text-align: right;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.card-1 {
+  grid-column: 2/3;
+}
+
+.card-2 {
+  grid-column: 3/4;
+}
+
+.card-3 {
+  grid-column: 4/5;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Modal from './components/Modal'
 import Footer from './components/Footer'
+import Card from './components/Card'
 
 import React from 'react';
 
@@ -12,6 +13,12 @@ return (
     <div>
       
       <Header>Testing text</Header>
+      <section class="card-container" id="qualifications">
+      <Card classname={"card-1"}></Card>
+      <Card classname={"card-2"}></Card>
+      <Card classname={"card-3"}></Card>
+      </section>
+      
       <Footer></Footer>
       <Modal title={'Testing Modal'}></Modal>
     </div>

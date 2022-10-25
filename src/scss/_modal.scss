@@ -15,40 +15,18 @@
         visibility: visible;
     }
 }
-.modalImage
-{
-    height: 75vh;
-    width: 55vw;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(to right, rgba($color-primary,0.8),rgba($color-secondary,0.8)), url("./images/pcb-1.jpg");
-    clip-path: polygon(0 0, 100% 0, 100% 90%,0 100%);
-    z-index: 200;
-}
-.center-box
+.modal-center-box
 {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 3rem;
     transform:translate(-50%,-50%);
     text-align: center;
-}
-.headertext
-{
-    color: $color-white;
-
-    &__primary
-    {
-        display: block;
-        font-size: 3rem;
-        text-align: center;
-    }
-    &__secondary
-    {
-        display: block;
-        font-size: 2rem;
-    }
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    z-index: 100;
+    background-color: $color-primary;
 }
 
 .backdrop
@@ -61,4 +39,27 @@
     height: 100%;
     z-index: 19;
     background: rgba($color-black,0.75);
+}
+.modal
+{
+    &-header
+    {
+        color: $color-white;
+        font-size: 4rem;
+        text-align: left;
+        grid-row: 1/2;
+    }
+    &-content
+    {
+        color: $color-white;
+        font-size: 1.5rem;
+        text-align: left;
+        grid-row: 2/3;
+    }
+    &-footer
+    {
+        justify-self: left;
+        grid-row: 3/4;
+    }
+    
 }

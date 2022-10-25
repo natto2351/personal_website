@@ -18,19 +18,21 @@
 .headertext
 {
     color: $color-white;
+    justify-content: center;
 
     &__primary
     {
-        font-family:'Fasthand',sans-serif;
-        display: block;
-        font-size: 3rem;
+        font-family:$font-primary;
+        font-size: 6rem;
         text-align: center;
         text-transform: uppercase;
+        width: 100%;
     }
 
     &_secondary
     {
+        font-family:$font-secondary;
         display: block;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }

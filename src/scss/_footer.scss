@@ -3,4 +3,14 @@
     background-color: $color-gray-2;
     padding: 10rem 0;
     font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(20vw, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.copyright
+{
+    padding: 2rem;
+    text-align: right;
 }
