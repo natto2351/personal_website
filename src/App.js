@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import Modal from './components/Modal'
 import Footer from './components/Footer'
-import Card from './components/Card'
+import Qualifications from './components/Qualifications'
 
 import React from 'react';
 
@@ -10,15 +10,10 @@ const App = () => {
 
 
 return (
-    <div>
+    <div class="main-grid">
       
       <Header>Testing text</Header>
-      <section class="card-container" id="qualifications">
-      <Card classname={"card-1"}></Card>
-      <Card classname={"card-2"}></Card>
-      <Card classname={"card-3"}></Card>
-      </section>
-      
+      <Qualifications></Qualifications>
       <Footer></Footer>
       <Modal title={'Testing Modal'}></Modal>
     </div>
