@@ -7,7 +7,7 @@
         text-decoration: none;
         border-radius: 100px;
         text-transform: uppercase;
-        padding: 1rem 7rem;
+        padding: 1rem 4rem;
         transition: all .2s;
         position: relative;
         text-align:center;
@@ -34,6 +34,7 @@
     {
         color: $color-gray-1;
         background-color: $color-white;
+        padding: 1rem 7rem;
         &::after
         {
             background-color:$color-white;
@@ -53,4 +54,14 @@
         z-index: -1;
         transition: all .4s;
     }
+     &--grey
+     {
+        color: $color-white;
+        background-color: $color-gray-1;
+        padding: 1rem 4rem;
+        &::after
+        {
+            background-color:$color-gray-1;
+        }
+     }
 }

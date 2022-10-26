@@ -1,8 +1,10 @@
 import Header from './components/Header'
-import Modal from './components/Modal'
+//import Modal from './components/Modal'
 import Footer from './components/Footer'
 import Qualifications from './components/Qualifications'
-
+import Gallery from './components/Gallery'
+import CoverLetter from './components/CoverLetter'
+import Contact from './components/Contact'
 import React from 'react';
 
 
@@ -12,10 +14,13 @@ const App = () => {
 return (
     <div class="main-grid">
       
-      <Header>Testing text</Header>
+      <Header></Header>
+      <CoverLetter></CoverLetter>
       <Qualifications></Qualifications>
+      <Gallery></Gallery>
+      <Contact></Contact>
       <Footer></Footer>
-      <Modal title={'Testing Modal'}></Modal>
+      
     </div>
   );
 }

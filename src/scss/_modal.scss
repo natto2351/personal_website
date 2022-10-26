@@ -8,12 +8,14 @@
     opacity: 0;
     visibility: hidden;
     transition: all .5s;
+    z-index: 99;
 
     &:target
-    {
-        opacity: 1;
-        visibility: visible;
-    }
+        {
+            opacity: 1;
+            visibility: visible;
+        }
+    
 }
 .modal-center-box
 {
@@ -27,6 +29,7 @@
     grid-template-rows: 1fr 2fr 1fr;
     z-index: 100;
     background-color: $color-primary;
+    height: 50vh;
 }
 
 .backdrop
@@ -52,14 +55,15 @@
     &-content
     {
         color: $color-white;
+        font-family: $font-secondary;
         font-size: 1.5rem;
         text-align: left;
         grid-row: 2/3;
+        overflow-y:auto;
     }
     &-footer
     {
         justify-self: left;
         grid-row: 3/4;
     }
-    
 }

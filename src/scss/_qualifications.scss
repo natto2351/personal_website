@@ -1,0 +1,28 @@
+.qualifications
+{
+    grid-column: center-start / center-end;
+    display:grid;
+    grid-template-columns: minmax(max-content, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 2rem;
+    text-align: center;
+    background-color: $color-tertiary;
+    padding: 4rem;
+}
+.card
+{
+    width: 100%;
+    height: 100%;
+}
+.card-1
+{
+    grid-row: 1/2;
+}
+.card-2
+{
+    grid-row: 2/3;
+}
+.card-3
+{
+    grid-row: 3/4;
+}

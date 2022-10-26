@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-};
+}
 html
 {
     box-sizing: border-box;
@@ -16,5 +16,12 @@ body
     font-size: 16px;
     line-height: 1.7;
     color: $color-gray-1;
-    padding: 1rem;
-};
+}
+
+.main-grid
+{
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 95vh  80vh repeat(4, min-content);
+    grid-template-columns:[full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content,15rem) [col-end] ) [center-end] 1fr[full-end];
+}

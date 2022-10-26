@@ -1,0 +1,46 @@
+.coverletter
+{
+    grid-column: full-start / full-end;
+    display:grid;
+    grid-template-columns:[coverfull-start] 1fr [covercenter-start] repeat(4, [covercol-start] minmax(min-content,1fr) [covercol-end] ) [covercenter-end] 1fr[coverfull-end];
+    
+    &__pictures
+    {
+        grid-column: coverfull-start / covercol-end 2;
+        background-image: linear-gradient(to right, rgba($color-4,0.8),rgba($color-white,0));
+        display: grid;
+        grid-template-columns: 0.5fr repeat(2,1fr) 0.5fr;
+        grid-template-rows: 0.5fr repeat(2,1fr) 0.5fr;
+        align-items:center;
+        overflow: hidden;
+    }
+    &__image-1
+    {
+        width:100%;
+        height:100%;
+        background-size: cover;
+        background-position: center;
+        grid-row: 2/4;
+        grid-column: 2/4;
+        background-image: url("./images/t-city-portrait-1.jpg");
+    }
+    &__text--container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        grid-column: covercol-start 3 / coverfull-end;
+        
+
+    }
+    &__heading
+    {
+        font-size: 2rem;
+    }
+    &__text
+    {
+        font-size: 1.4rem;
+        color: $color-gray-1;
+    }
+}
