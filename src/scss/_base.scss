@@ -8,6 +8,7 @@ html
 {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body
 {
@@ -22,6 +23,6 @@ body
 {
     padding: 2rem;
     display: grid;
-    grid-template-rows: 95vh  80vh repeat(4, min-content);
+    grid-template-rows: 75vh 40vw repeat(4, min-content);
     grid-template-columns:[full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content,15rem) [col-end] ) [center-end] 1fr[full-end];
 }

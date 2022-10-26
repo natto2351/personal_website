@@ -1,7 +1,7 @@
 const Gallery = () =>
 {
     return(
-        <div class="gallery">Gallery Placeholder</div>
+        <div class="gallery" id="gallery">Gallery Placeholder</div>
     );
 }
 
