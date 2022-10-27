@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "sasswatch": "sass --watch ./src/scss/main.scss ./src/output.css",
     "sasscompile": "sass ./src/main.scss ./src/output.css",
-    "runall": "npm start npm run sasswatch"
+    "runall": "npm-run-all start sasswatch"
   },
   "eslintConfig": {
     "extends": [

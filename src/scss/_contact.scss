@@ -1,5 +1,25 @@
 .contact
 {
-    grid-column: center-start / center-end;
-    background-color: $color-5;
+    grid-column: full-start / full-end;
+    background-color: $color-gray-3;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(15rem, 1fr));
+    padding: 6rem;
+    &__container
+    {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__header
+    {
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+    &__icon
+    {
+        width: 4rem;
+        height: 4rem;
+        fill:$color-gray-1;
+    }
 }

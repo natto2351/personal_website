@@ -9,7 +9,7 @@ const Footer = () =>
                 <li class="nav__item"><a href="#gallery" class="nav__link"> Pictures</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link"> Contact Me</a></li>
             </ul>
-            <p class="copyright">Content created and owned by Nathaniel Pereira. All rights reserved.</p>
+            <p class="copyright"> &copy; Nathaniel Pereira 2022. All content is created and managed by Nathaniel. All rights reserved..</p>
         </footer>
     );
 }

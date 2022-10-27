@@ -9,7 +9,7 @@ const Modal = (props) =>
             <a class="backdrop" href="#qualifications"> </a>
             <div class= "modal-center-box">
                 <header class="modal-header">{props.title}</header>
-                <p class="modal-content">{props.content}</p>
+                <div class="modal-content">{props.content}</div>
                 <footer class="modal-footer">
                     <Button class="btn btn--white" anchor={'#qualifications'}> Close </Button>
                 </footer>

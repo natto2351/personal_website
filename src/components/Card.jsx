@@ -1,13 +1,17 @@
 
+ import icons from '../images/sprites.svg'
+
 const Card = (props) =>
 {
-    //return(
-    //    <div class={props.classname}>{setText(props.buttonName)}
-    //    <Button class="btn btn--grey" anchor={"#modal"} onClick={props.onClick}> {props.buttonName} </Button>
-    //    </div>
-    //);
     return(
-        <a class={props.classname} href="#modal" onClick={props.onClick}> {props.buttonName}</a>
+        <div class="card"> 
+        <a class="card__item" href="#modal" onClick={props.onClick}>
+            <svg class="card__icon">
+                <use href={`${icons}#icon-${props.iconname}`}></use>
+            </svg>
+            <div class="card__text">{props.buttonName}</div>
+            </a>
+        </div>
     );
 }
 

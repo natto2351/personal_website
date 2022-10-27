@@ -4,6 +4,7 @@
 
     display:grid;
     grid-template-columns:[coverfull-start] 1fr [covercenter-start] repeat(4, [covercol-start] minmax(min-content,1fr) [covercol-end] ) [covercenter-end] 1fr[coverfull-end];
+    background-color: $color-gray-3;
     
     &__pictures,
     &__text--container
@@ -42,11 +43,18 @@
     &__heading
     {
         font-size: 4rem;
+        font-weight: 700;
     }
     &__text
     {
         font-family: $font-secondary;
         font-size: 1.7rem;
         color: $color-gray-1;
+    }
+    &__quote
+    {
+        font-family:$font-secondary;
+        font-weight:700;
+        font-style:italic;
     }
 }

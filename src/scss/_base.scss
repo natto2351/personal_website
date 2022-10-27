@@ -23,6 +23,11 @@ body
 {
     padding: 2rem;
     display: grid;
-    grid-template-rows: 75vh 40vw repeat(4, min-content);
+    grid-template-rows: 75vh minmax(min-content,40vw) repeat(4, min-content);
     grid-template-columns:[full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content,15rem) [col-end] ) [center-end] 1fr[full-end];
+}
+
+.heading-1
+{
+    font-size: 4rem;
 }
