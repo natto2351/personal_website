@@ -113,7 +113,6 @@ body {
   grid-template-rows: 1fr 2fr 1fr;
   z-index: 100;
   background-color: #486AF8;
-  opacity: 75%;
   height: 60vh;
   width: 50vw;
 }
@@ -204,12 +203,11 @@ body {
 .coverletter__image-1 {
   width: 90%;
   height: 90%;
+  object-fit: cover;
   background-size: cover;
   background-position: center;
   grid-row: 2/4;
   grid-column: 2/4;
-  background-image: url("./images/t-city-portrait-1.jpg");
-  opacity: 65%;
 }
 .coverletter__text--container {
   grid-column: covercol-start 3/coverfull-end;
@@ -296,7 +294,7 @@ body {
   grid-column: full-start/full-end;
   background-color: rgb(240, 242, 245);
   display: grid;
-  grid-template-columns: repeat(4, minmax(15rem, 1fr));
+  grid-template-columns: repeat(4, minmax(max-content, 1fr));
   padding: 6rem;
 }
 .contact__container {
@@ -312,6 +310,9 @@ body {
   width: 4rem;
   height: 4rem;
   fill: #777;
+}
+.contact__text {
+  margin-left: 2rem;
 }
 
 .footer {

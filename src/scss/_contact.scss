@@ -3,7 +3,7 @@
     grid-column: full-start / full-end;
     background-color: $color-gray-3;
     display: grid;
-    grid-template-columns: repeat(4,minmax(15rem, 1fr));
+    grid-template-columns: repeat(4,minmax(max-content, 1fr));
     padding: 6rem;
     &__container
     {
@@ -21,5 +21,9 @@
         width: 4rem;
         height: 4rem;
         fill:$color-gray-1;
+    }
+    &__text
+    {
+        margin-left:2rem;
     }
 }

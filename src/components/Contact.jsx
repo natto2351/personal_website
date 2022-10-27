@@ -9,25 +9,26 @@ const Contact = () =>
                 <svg class="contact__icon">
                 <use href={`${icons}#icon-phone-call`}></use>
                 </svg>
-                +65 9170 1061
+                <div class="contact__text"> +65 9170 1061</div>
+                
             </div>
             <div class="contact__container">
                 <svg class="contact__icon">
                 <use href={`${icons}#icon-github`}></use>
                 </svg>
-                natto2351
+                <div class="contact__text"> natto2351</div>
             </div>
             <div class="contact__container">
                 <svg class="contact__icon">
                 <use href={`${icons}#icon-at-sign`}></use>
                 </svg>
-                nathanielpereira95@gmail.com
+                <div class="contact__text"> nathanielpereira95@gmail.com</div>
             </div>
             <div class="contact__container">
                 <svg class="contact__icon">
                 <use href={`${icons}#icon-linkedin`}></use>
                 </svg>
-                Nathaniel J. Pereira
+                <div class="contact__text">Nathaniel J. Pereira</div>
             </div>
         </div>
     );

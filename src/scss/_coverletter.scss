@@ -22,12 +22,11 @@
     {
         width:90%;
         height: 90%;
+        object-fit: cover;
         background-size: cover;
         background-position: center;
         grid-row: 2/4;
         grid-column: 2/4;
-        background-image: url("./images/t-city-portrait-1.jpg");
-        opacity: 65%;
     }
     &__text--container
     {
