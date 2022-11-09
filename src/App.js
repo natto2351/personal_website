@@ -1,5 +1,4 @@
 import Header from './components/Header'
-//import Modal from './components/Modal'
 import Footer from './components/Footer'
 import Qualifications from './components/Qualifications'
 import Gallery from './components/Gallery'

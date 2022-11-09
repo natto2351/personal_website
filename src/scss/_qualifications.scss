@@ -1,15 +1,12 @@
 .qualifications
 {
     grid-column: full-start / full-end;
-    display:grid;
-    grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    row-gap: 7rem;
     text-align: center;
     padding: 4rem;
 
     background-image: linear-gradient(to bottom, rgba($color-secondary,0.5),rgba($color-secondary,0.5)), url("./images/t-stn-land-2.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: fit;
+    background-position: top left;
     
     &__heading
     {
@@ -17,4 +14,47 @@
         padding-top: 7rem;
         color: $color-white;
     }
+
+    &__tabs
+    {
+        list-style: none;
+        display:flex;
+        padding: 1rem 1.5rem;
+        justify-content: space-around;
+
+        &__items
+        {
+            padding: 1rem 2rem;
+
+            &:active, &--active
+            {
+                background-color: $color-5;
+            }
+        }
+        &__items::before
+        {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 3px;
+        z-index: 2;
+        background-color: $color-white;
+        transform:scaleX(0);
+        transform-origin: left;
+        transition: transform .2s,
+        }
+        &__items:hover
+        {
+        transform: scaleX(1);
+        background-color:$color-5;
+        color:$color-5;
+        width: 100%;
+        }
+    }
 }
+
+  
+  

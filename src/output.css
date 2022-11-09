@@ -4,6 +4,10 @@
   margin-bottom: 2rem;
 }
 
+.heading-1 {
+  font-size: 4rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +31,8 @@ body {
 .main-grid {
   padding: 2rem;
   display: grid;
-  grid-template-rows: 75vh minmax(min-content, 40vw) repeat(4, min-content);
-  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] 1fr [full-end];
-}
-
-.heading-1 {
-  font-size: 4rem;
+  grid-template-rows: 75vh minmax(min-content, 40vw) min-content repeat(3, minmax(min-content, max-content));
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 100vw) [col-end]) [center-end] 1fr [full-end];
 }
 
 .btn, .btn:link, .btn:visited {
@@ -234,19 +234,48 @@ body {
 
 .qualifications {
   grid-column: full-start/full-end;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
-  row-gap: 7rem;
   text-align: center;
   padding: 4rem;
   background-image: linear-gradient(to bottom, rgba(63, 133, 217, 0.5), rgba(63, 133, 217, 0.5)), url("./images/t-stn-land-2.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: fit;
+  background-position: top left;
 }
 .qualifications__heading {
   grid-column: 1/-1;
   padding-top: 7rem;
   color: #fff;
+}
+.qualifications__tabs {
+  list-style: none;
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: space-around;
+}
+.qualifications__tabs__items {
+  padding: 1rem 2rem;
+}
+.qualifications__tabs__items:active, .qualifications__tabs__items--active {
+  background-color: #48F8CA;
+}
+.qualifications__tabs__items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 3px;
+  z-index: 2;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+.qualifications__tabs__items:hover {
+  transform: scaleX(1);
+  background-color: #48F8CA;
+  color: #48F8CA;
+  width: 100%;
 }
 
 .gallery {
@@ -294,11 +323,18 @@ body {
   grid-column: full-start/full-end;
   background-color: rgb(240, 242, 245);
   display: grid;
-  grid-template-columns: repeat(4, minmax(max-content, 1fr));
-  padding: 6rem;
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+@media screen and (min-width: 1000px) {
+  .contact {
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+  }
 }
 .contact__container {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
 }

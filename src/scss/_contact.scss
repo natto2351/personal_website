@@ -3,11 +3,17 @@
     grid-column: full-start / full-end;
     background-color: $color-gray-3;
     display: grid;
-    grid-template-columns: repeat(4,minmax(max-content, 1fr));
-    padding: 6rem;
+    @media screen and (min-width:1000px)
+    {
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    }
+    grid-gap: 2rem;
+    align-items:center;
+    padding: 0 0 2rem 0;
     &__container
     {
         display:flex;
+        flex-grow: 1;
         align-items: center;
         justify-content: center;
     }

@@ -4,7 +4,7 @@ const Contact = () =>
 {
     return(
         <div class="contact" id="contact">
-            <div class="contact__header heading-1 margin-bottom-small">Contact Nathaniel</div>
+            <div class="contact__header heading-1">Contact Nathaniel</div>
             <div class="contact__container">
                 <svg class="contact__icon">
                 <use href={`${icons}#icon-phone-call`}></use>
