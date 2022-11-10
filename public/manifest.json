@@ -3,17 +3,17 @@
   "name": "Showcasing the best",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "train_wagon_icon_128.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "train_wagon_icon_128.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "train_wagon_icon_512.ico",
       "type": "image/png",
       "sizes": "512x512"
     }

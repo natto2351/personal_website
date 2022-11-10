@@ -3,36 +3,39 @@ import { useState } from 'react'
 
 const Qualifications = () =>
 {
-    const [tabText, setTabText] = useState("Error: Text did not load in correctly.");
-    const [workexpClassname, setwork] = useState("qualifications__tabs__items");
-    const [eduClassname, setedu] = useState("qualifications__tabs__items");
-    const [hobbyClassname, sethobby] = useState("qualifications__tabs__items");
-    const [accoladeClassname, setaccolade] = useState("qualifications__tabs__items");
+    let unselectedTab = "qualifications__tabs__items";
+    let selectedTab = "qualifications__tabs__items qualifications__tabs__items--active";
+    const [tabText, setTabText] = useState({content: `<div>Hello</div>`});
+    const [workexpClassname, setwork] = useState(selectedTab);
+    const [eduClassname, setedu] = useState(unselectedTab);
+    const [hobbyClassname, sethobby] = useState(unselectedTab);
+    const [accoladeClassname, setaccolade] = useState(unselectedTab);
 
-const handler1 = () => 
+    const mainHandler = (number) =>
     {
         classnameReset();
-        setTabText("1");
-        setwork("qualifications__tabs__items qualifications__tabs__items--active");
-    };
-    const handler2 = () => 
-    {
-        classnameReset();
-        setTabText("2");
-        setedu("qualifications__tabs__items qualifications__tabs__items--active");
-    };
-    const handler3 = () => 
-    {
-        classnameReset();
-        setTabText("3");
-        sethobby("qualifications__tabs__items qualifications__tabs__items--active");
-    };
-    const handler4 = () => 
-    {
-        classnameReset();
-        setTabText("4");
-        setaccolade("qualifications__tabs__items qualifications__tabs__items--active");
-    };
+        switch(number)
+        {
+            case 1:
+                setTabText(tabText.content);
+                setwork(selectedTab);
+                break;
+            case 2:
+                setTabText(tabText.content);
+                setedu(selectedTab);
+                break;
+            case 3:
+                setTabText(tabText.content);
+                sethobby(selectedTab);
+                break;
+            case 4:
+                setTabText(tabText.content);
+                setaccolade(selectedTab);
+                break;
+            default:
+                break;
+        }
+    }
 
  const classnameReset = () =>
  {
@@ -45,10 +48,18 @@ const handler1 = () =>
         <section class="qualifications">
             <div class="heading-1">My Journey</div>
             <ol class="qualifications__tabs">
-                <li class={workexpClassname} onClick={handler1}>Work Experience</li>
-                <li class={eduClassname} onClick={handler2}>Education</li>
-                <li class={hobbyClassname} onClick={handler3}>Hobbies</li>
-                <li class={accoladeClassname} onClick={handler4}>Accolades</li>
+                <div>
+                <li class={workexpClassname} onClick={()=>mainHandler(1)}>Work Experience</li>
+                </div>
+                <div>
+                <li class={eduClassname} onClick={()=>mainHandler(2)}>Education</li>
+                </div>
+                <div>
+                <li class={hobbyClassname} onClick={()=>mainHandler(3)}>Hobbies</li>
+                </div>
+                <div>
+                <li class={accoladeClassname} onClick={()=>mainHandler(4)}>Accolades</li>
+                </div>
             </ol>
             <section class="qualifications__details">
                 {tabText}
